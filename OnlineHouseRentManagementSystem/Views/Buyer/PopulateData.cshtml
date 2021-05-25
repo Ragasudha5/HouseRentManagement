@@ -1,0 +1,72 @@
+﻿@model IEnumerable<OnlineHouseRentManagementSystem.Models.HouseDetailcs>
+
+@{
+    ViewBag.Title = "PopulateData";
+}
+
+<br />
+<center>
+    <h2>HouseDetails</h2>
+    </center>
+
+<br />
+
+<div class="row" >
+    @foreach (var item in Model)
+    {
+        <div class="col-4" >
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">@item.Name</div>
+                <div class="card-body" style="display:flex; ">
+                    <div style="width:40%; ">
+                        Email
+                    </div>
+                    <div style=" text-align: left">
+                        @item.Email
+                    </div>
+                </div>
+                <div class="card-body" style="display:flex">
+                    <div style="width:40%; ">ContactNumber </div>
+                    <div style=" text-align: left">
+                        @item.ContactNumber
+                    </div>
+                </div>
+                <div class="card-body" style="display:flex">
+                    <div style="width:40%; ">Location </div>
+                    <div style=" text-align: left">
+                        @item.Location
+                    </div>
+                </div>
+                <div class="card-body" style="display:flex">
+                    <div style="width:40%; ">Bedrooms </div>
+                    <div style=" text-align: left">
+                        @item.Bedrooms
+                    </div>
+                </div>
+                <div class="card-body" style="display:flex">
+                    <div style="width:40%; ">HouseRent </div>
+                    <div style=" text-align: left">
+                        @item.HouseRent
+                    </div>
+                </div>
+                <div class="card-body" style="display:flex">
+                    <div style="width:40%; ">
+                       Description
+                    </div>
+                    <div style=" text-align: left">
+                        @item.Description
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <a href="@Url.Action("Booking", "Buyer",new { id=item.IdUs })" class="btn btn-outline-success" style=margin:5px;>Interested</a>
+
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<OnlineHouseRentManagementSystem.Models.BookingDetail>
+@{
+    ViewBag.Title = "BookingDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center>
+    <h2>BookingDetails</h2>
+</center>
+<br />
+<table class="table">
+    <tr>        
+        <th>
+            @Html.DisplayNameFor(model => model.BuyerEmail)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.SellerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HouseRent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerEmail)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.HouseRent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <a href="@Url.Action("Edit", "BookingDetails",new { id=item.IdUs })" class="btn btn-outline-success" style=margin:5px; role="button" aria-pressed="true">Edit</a>
+                            <a href="@Url.Action("Delete", "BookingDetails",new { id=item.IdUs })" class="btn btn-outline-warning" style=margin:5px; role="button" aria-pressed="true">Delete</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineHouseRentManagementSystem", "OnlineHouseRentManagementSystem\OnlineHouseRentManagementSystem.csproj", "{3E86410B-A331-4BC6-9E8B-AC6B98F4B78A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E86410B-A331-4BC6-9E8B-AC6B98F4B78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E86410B-A331-4BC6-9E8B-AC6B98F4B78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E86410B-A331-4BC6-9E8B-AC6B98F4B78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E86410B-A331-4BC6-9E8B-AC6B98F4B78A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8A759D7-3127-4869-A3B5-18B7CF6A7203}
+	EndGlobalSection
+EndGlobal

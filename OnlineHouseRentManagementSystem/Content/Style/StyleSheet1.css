@@ -1,0 +1,13 @@
+﻿#example1 {   
+    width: 100%;
+    height: 550px;
+    background-image: url('https://cdn.bitdegree.org/learn/pom-laptop.png');        
+    background-position: right bottom, right top;        
+    background-repeat: no-repeat, repeat;
+}
+
+
+#example2 {
+    display: flex;
+    justify-content: space-between;
+}

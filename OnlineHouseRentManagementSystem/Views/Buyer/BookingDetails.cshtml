@@ -1,0 +1,72 @@
+﻿@model IEnumerable<OnlineHouseRentManagementSystem.Models.BookingDetail>
+    @{
+        ViewBag.Title = "BookingDetails";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+<br />
+<center>
+    <h2>BookingDetails</h2>
+</center>
+<br />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            
+            <div class="col-4">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Booking Detail</div>
+                    <div class="card-body" style="display:flex; ">
+                        <div style="width:40%; ">
+                            BuyerEmail
+                        </div>
+                        <div style=" text-align: left">
+                            @item.BuyerEmail
+                        </div>
+                    </div>
+                    <div class="card-body" style="display:flex">
+                        <div style="width:40%; ">SellerEmail </div>
+                        <div style=" text-align: left">
+                            @item.SellerEmail
+                        </div>
+                    </div>
+                    <div class="card-body" style="display:flex">
+                        <div style="width:40%; ">Location </div>
+                        <div style=" text-align: left">
+                            @item.Location
+                        </div>
+                    </div>
+                    <div class="card-body" style="display:flex">
+                        <div style="width:40%; ">HouseRent </div>
+                        <div style=" text-align: left">
+                            @item.HouseRent
+                        </div>
+                    </div>
+                    <div class="card-body" style="display:flex">
+                        <div style="width:40%; ">
+                            Description
+                        </div>
+                        <div style=" text-align: left">
+                            @item.Description
+                        </div>
+                    </div>
+                    <div class="card-body" style="display:flex">
+                        <div style="width:40%; ">
+                            Status
+                        </div>
+                        <div style=" text-align: left">
+                            @item.Status
+                        </div>
+                    </div>                    
+                    <div class="card-body">
+                        
+                        <a href="@Url.Action("Delete", "BookingDetails",new { id=item.IdUs })" class="btn btn-outline-warning" style=margin:5px;>Cancel Booking</a>
+
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        }
+
+    </div>
